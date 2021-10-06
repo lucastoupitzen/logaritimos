@@ -57,8 +57,8 @@ def teste_expoente(base, logaritimando):
 
 
 def testa_decimais(base, logaritimando, expoente):
-    decimais_estatico = 10**(-7)
-    # realizará testes com decimais até a 7º casa
+    decimais_estatico = 10**(-6)
+    # realizará testes com decimais até a 6º casa
     exp = expoente + decimais_estatico  # valor que será retornado
     teste = 0
     while teste <= logaritimando:
