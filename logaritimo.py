@@ -18,8 +18,7 @@ def entrada_usuario():
         if condição_base(base):
             controle_base = True
         else:
-            print("Valor da base fora da condição de existencência! A base \
-                 deve ser um número positivo diferente de 1!")
+            print("Valor da base fora da condição de existencência! A base deve ser um número positivo diferente de 1!")
     casas_decimais = casas_dec()  # recebe o valor de casas decimais
     return [logaritimando, base, casas_decimais]
 
@@ -28,17 +27,14 @@ def casas_dec():  # recebe e analisa o número de casas decimais
     controle_cd = False
     while controle_cd == False:
         casas_decimais = int(
-            input("Com quantas casas decimais você deseja (Recomendado: 6 \
-                casas decimais)? "))
+            input("Com quantas casas decimais você deseja (Recomendado: 6 casas decimais)? "))
         if casas_decimais <= 0:
             print("Erro na quantidade de casas decimais")
         elif casas_decimais > 6:
             print(
-                "Alerta: Muitas casas decimais tornam o cálculo mais lento. É \
-                    recomendado o uso de até 6 casas.")
+                "Alerta: Muitas casas decimais tornam o cálculo mais lento. É recomendado o uso de até 6 casas.")
             resposta = str(input(
-                f"Deseja continuar (sim ou não) o cálculo com {casas_decimais} \
-                    casas decimais? "))
+                f"Deseja continuar (sim ou não) o cálculo com {casas_decimais} casas decimais? "))
             resposta.lower
             if resposta == "sim":
                 controle_cd = True
