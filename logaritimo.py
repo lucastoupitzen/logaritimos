@@ -60,15 +60,26 @@ def teste_expoente(base, logaritimando):
     expoente = 0  # será o valor retornado
     pause = False
     while pause == False:
-        memoria_prox = base**expoente
-        if memoria_anterior <= logaritimando < memoria_prox:
-            # testa se o logaritimando está entre os valores
-            expoente -= 1  # expoente do inteiro anterior
-            return expoente
-            pause = True
-        else:
-            memoria_anterior = memoria_prox
-            expoente += 1
+        if logaritimando >= 1:
+            memoria_prox = base**expoente
+            if memoria_anterior <= logaritimando < memoria_prox:
+                # testa se o logaritimando está entre os valores
+                expoente -= 1  # expoente do inteiro anterior
+                return expoente
+                pause = True
+            else:
+                memoria_anterior = memoria_prox
+                expoente += 1
+        else: 
+            memoria_prox = base**expoente
+            if memoria_anterior >= logaritimando > memoria_prox:
+                # testa se o logaritimando está entre os valores
+                expoente -= 1  # expoente do inteiro anterior
+                return expoente
+                pause = True
+            else:
+                memoria_anterior = memoria_prox
+                expoente -= 1
 
 
 def testa_decimais(base, logaritimando, expoente, casas_decimais):
@@ -92,4 +103,5 @@ def main():
 
 
 main()
+
 
